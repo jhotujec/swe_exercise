@@ -1,6 +1,3 @@
-import logging
-
-
 class Calculator:
     """
     A simple calculator capable of doing basic arithmetics. Supports `prefix` and
@@ -26,7 +23,6 @@ class Calculator:
 
     def __init__(self):
         self.stack = []
-        self.logger = logging.getLogger(__name__)
 
     def infix_to_prefix(self, infix: list) -> list:
         """
@@ -111,7 +107,3 @@ class Calculator:
 
         normalized_exp = self.normalize_input(exp)
         return self.evaluate(normalized_exp)
-
-
-a = Calculator()
-print(a.calculate('( 3 + 3 ) * 3', infix=True))
